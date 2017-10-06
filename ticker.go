@@ -31,7 +31,6 @@ func (l *Livecoin) TickerAll(ctx context.Context) ([]Ticker, error) {
 
 func (l *Livecoin) Ticker(ctx context.Context, market string) (Ticker, error) {
 	url := "exchange/ticker?currencyPair=" + market
-	fmt.Printf("Calling %s..\n", url)
 	req, err := l.newReq(ctx, "GET", url)
 	if err != nil {
 		return Ticker{}, err
