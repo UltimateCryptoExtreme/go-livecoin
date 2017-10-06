@@ -2,7 +2,6 @@ package livecoin
 
 import (
 	"context"
-	"fmt"
 )
 
 type Ticker struct {
